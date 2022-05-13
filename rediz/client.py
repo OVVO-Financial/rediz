@@ -1904,7 +1904,7 @@ class Rediz(RedizConventions):
 
         # Introduce subsidy bonus
         n_participants = pool / self.num_predictions
-        subsidy = self._PARTICIPATION_INCENTIVE/(5+n_participants)
+        subsidy = self._PARTICIPATION_INCENTIVE/n_participants
         participation_incentive = Counter(dict((p, subsidy) for p in participant_set))
         game_payments.update(participation_incentive)
         return game_payments
